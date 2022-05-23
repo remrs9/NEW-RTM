@@ -1,0 +1,15 @@
+進去跑 io_SWITCHWTPE = True; io_runagain=true 會在 inventory
+沒進去跑 io_SWITCHWTPE = True; io_runagain = false 會在上一個頁面
+	上一個頁面:  如果進去跑，就在inventory，如果是剛換倉，第一次跑換倉，就會在destination。所以換倉後沒有進去跑過，就不要按destination
+
+
+如果有錯就先中斷RPA?
+
+
+010 VVV
+
+100 VVV
+
+001 VVV
+
+000

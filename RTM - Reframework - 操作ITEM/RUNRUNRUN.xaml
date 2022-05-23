@@ -17,8 +17,8 @@
     <x:Property Name="out_EXDT2" Type="InArgument(sd:DataTable)" />
     <x:Property Name="io_runagain" Type="InOutArgument(x:Boolean)" />
     <x:Property Name="io_NoItem" Type="InOutArgument(x:Boolean)" />
-    <x:Property Name="out_CountryCode" Type="OutArgument(x:String)" />
     <x:Property Name="io_Gettable" Type="InOutArgument(x:Boolean)" />
+    <x:Property Name="io_CountryCode" Type="InOutArgument(x:String)" />
   </x:Members>
   <this:RUNRUNRUN.out_EXDT2>
     <InArgument x:TypeArguments="sd:DataTable" />
@@ -26,7 +26,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1786,10604</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1786,10434</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RUNRUNRUN_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -93,10 +93,9 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RUNRUNRUN" sap:VirtualizedContainerService.HintSize="1796,10539" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RUNRUNRUN" sap:VirtualizedContainerService.HintSize="1796,10369" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Equ" />
       <Variable x:TypeArguments="x:String" Name="stype" />
@@ -269,25 +268,14 @@
         <OutArgument x:TypeArguments="x:String">[CountryCode]</OutArgument>
       </ui:GetValue.Value>
     </ui:GetValue>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1754,230" sap2010:WorkflowViewState.IdRef="CommentOut_10">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="305,152" sap2010:WorkflowViewState.IdRef="Sequence_58">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="263,60" sap2010:WorkflowViewState.IdRef="Assign_41">
-            <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[out_CountryCode]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[CountryCode]</InArgument>
-            </Assign.Value>
-          </Assign>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+    <Assign sap:VirtualizedContainerService.HintSize="1754,60" sap2010:WorkflowViewState.IdRef="Assign_41">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[io_CountryCode]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[CountryCode]</InArgument>
+      </Assign.Value>
+    </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="1754,60" sap2010:WorkflowViewState.IdRef="Assign_33">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[WTPEBoolean]</OutArgument>

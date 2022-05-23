@@ -219,7 +219,7 @@
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Increment transaction index and reset retries" sap:VirtualizedContainerService.HintSize="3628,6103" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="Increment transaction index and reset retries" sap:VirtualizedContainerService.HintSize="3628,5932" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -236,15 +236,15 @@
                 <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="3586,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;This is SetTransactionStatus IOARR9&quot;+String.Join(&quot;__&quot;,io_Arr9)]" />
                 <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="3586,84" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;This is IOEQUARR in SetTransactionStatus&quot; + string.Join(&quot;_&quot;,io_equarr)]" />
                 <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="3586,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;This is SetTransactionStatus IOARR9 length&quot;+io_Arr9.Length.ToString]" />
-                <ui:InterruptibleDoWhile Condition="[noover = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="3586,5057" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                <ui:InterruptibleDoWhile Condition="[noover = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="3586,4886" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                   <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3269,4892" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3269,4721" sap2010:WorkflowViewState.IdRef="Sequence_52">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[io_Arr9.Length &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="3227,4800" sap2010:WorkflowViewState.IdRef="If_14">
+                      <If Condition="[io_Arr9.Length &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="3227,4629" sap2010:WorkflowViewState.IdRef="If_14">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="2228,3559" sap2010:WorkflowViewState.IdRef="Sequence_50">
                             <sap:WorkflowViewStateService.ViewState>
@@ -570,7 +570,7 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence sap2010:Annotation.AnnotationText="不是最後一個" sap:VirtualizedContainerService.HintSize="1302,1572" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                <Sequence sap2010:Annotation.AnnotationText="不是最後一個" sap:VirtualizedContainerService.HintSize="1302,1571" sap2010:WorkflowViewState.IdRef="Sequence_49">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -579,7 +579,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1260,84" sap2010:WorkflowViewState.IdRef="MessageBox_14" Text="[&quot;有回倉的標記，但還不是最後一個，就是多項的還在進行中的 意思，直接前往下一個&quot;]" />
-                                  <Assign sap2010:Annotation.AnnotationText="Increment the TransactionNumber to get the next transaction to be processed." DisplayName="Assign io_TransactionNumber" sap:VirtualizedContainerService.HintSize="1260,118" sap2010:WorkflowViewState.IdRef="Assign_39">
+                                  <Assign sap2010:Annotation.AnnotationText="Increment the TransactionNumber to get the next transaction to be processed." DisplayName="Assign io_TransactionNumber" sap:VirtualizedContainerService.HintSize="1260,117" sap2010:WorkflowViewState.IdRef="Assign_39">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Int32">[io_TransactionNumber]</OutArgument>
                                     </Assign.To>
@@ -747,21 +747,21 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="954,4643" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                          <Sequence sap:VirtualizedContainerService.HintSize="954,4472" sap2010:WorkflowViewState.IdRef="Sequence_51">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[io_SwitchWTPE = True]" sap:VirtualizedContainerService.HintSize="912,2486" sap2010:WorkflowViewState.IdRef="If_13">
+                            <If Condition="[io_SwitchWTPE = True]" sap:VirtualizedContainerService.HintSize="912,2315" sap2010:WorkflowViewState.IdRef="If_13">
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="604,2329" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                <Sequence sap:VirtualizedContainerService.HintSize="604,2158" sap2010:WorkflowViewState.IdRef="Sequence_61">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap2010:Annotation.AnnotationText="Increment the TransactionNumber to get the next transaction to be processed." DisplayName="Assign io_TransactionNumber" sap:VirtualizedContainerService.HintSize="562,118" sap2010:WorkflowViewState.IdRef="Assign_42">
+                                  <Assign sap2010:Annotation.AnnotationText="Increment the TransactionNumber to get the next transaction to be processed." DisplayName="Assign io_TransactionNumber" sap:VirtualizedContainerService.HintSize="562,117" sap2010:WorkflowViewState.IdRef="Assign_42">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Int32">[io_TransactionNumber]</OutArgument>
                                     </Assign.To>
@@ -786,43 +786,32 @@
                                       </Sequence>
                                     </ui:CommentOut.Body>
                                   </ui:CommentOut>
-                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="562,684" sap2010:WorkflowViewState.IdRef="CommentOut_23">
-                                    <ui:CommentOut.Body>
-                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="526,606" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                  <If Condition="[io_gettable = False and io_islast = true and io_CountryCode.Contains(&quot;TAIWAN&quot;)]" sap:VirtualizedContainerService.HintSize="562,514" sap2010:WorkflowViewState.IdRef="If_23">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,328" sap2010:WorkflowViewState.IdRef="Sequence_85">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <If Condition="[io_gettable = False and io_islast = true and io_CountryCode.Contains(&quot;TAIWAN&quot;)]" sap:VirtualizedContainerService.HintSize="484,514" sap2010:WorkflowViewState.IdRef="If_23">
-                                          <If.Then>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="376,328" sap2010:WorkflowViewState.IdRef="Sequence_85">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_32" Text="[&quot;之前WTPE2現在WTPE3，要抓表格了&quot;]" />
-                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DataScraping4 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="DataScraping4.xaml">
-                                                <ui:InvokeWorkflowFile.Arguments>
-                                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                                                </ui:InvokeWorkflowFile.Arguments>
-                                              </ui:InvokeWorkflowFile>
-                                            </Sequence>
-                                          </If.Then>
-                                          <If.Else>
-                                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_84">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                            </Sequence>
-                                          </If.Else>
-                                        </If>
+                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_32" Text="[&quot;之前WTPE2現在WTPE3，要抓表格了&quot;]" />
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DataScraping4 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="DataScraping4.xaml">
+                                          <ui:InvokeWorkflowFile.Arguments>
+                                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                          </ui:InvokeWorkflowFile.Arguments>
+                                        </ui:InvokeWorkflowFile>
                                       </Sequence>
-                                    </ui:CommentOut.Body>
-                                  </ui:CommentOut>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_84">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
                                   <If Condition="[io_runagain = True]" sap:VirtualizedContainerService.HintSize="562,1061" sap2010:WorkflowViewState.IdRef="If_16">
                                     <If.Then>
                                       <Sequence sap:VirtualizedContainerService.HintSize="526,875" sap2010:WorkflowViewState.IdRef="Sequence_70">
@@ -908,7 +897,7 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Assign sap2010:Annotation.AnnotationText="Increment the TransactionNumber to get the next transaction to be processed." DisplayName="Assign io_TransactionNumber" sap:VirtualizedContainerService.HintSize="263,118" sap2010:WorkflowViewState.IdRef="Assign_43">
+                                <Assign sap2010:Annotation.AnnotationText="Increment the TransactionNumber to get the next transaction to be processed." DisplayName="Assign io_TransactionNumber" sap:VirtualizedContainerService.HintSize="263,117" sap2010:WorkflowViewState.IdRef="Assign_43">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Int32">[io_TransactionNumber]</OutArgument>
                                   </Assign.To>

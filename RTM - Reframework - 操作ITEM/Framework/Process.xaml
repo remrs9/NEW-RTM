@@ -24,7 +24,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1057,4477</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1057,4307</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -89,9 +89,10 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1067,4412" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1067,4242" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="inputNumber" />
       <Variable x:TypeArguments="x:String" Name="begin" />
@@ -153,17 +154,17 @@
     </ui:CommentOut>
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1025,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="observe" />
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1025,63" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="目前進度:&#xA;多項的如果有0的要刪掉，&#xA;&#xA;可以做的方向:&#xA;io_equarr.length &lt;&gt;0&#xA;且&#xA;io_equarr(0) = 0&#xA;要io_throw= true&#xA;然後換倉後要讓runrunrun也能跑&#xA;" />
-    <If Condition="[io_SwitchWTPE = True]" sap:VirtualizedContainerService.HintSize="1025,2026" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[io_SwitchWTPE = True]" sap:VirtualizedContainerService.HintSize="1025,1856" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="604,1868" sap2010:WorkflowViewState.IdRef="Sequence_21">
+        <Sequence sap:VirtualizedContainerService.HintSize="604,1698" sap2010:WorkflowViewState.IdRef="Sequence_21">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[io_equarr(0)= 0]" sap:VirtualizedContainerService.HintSize="562,1776" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[io_equarr(0)= 0]" sap:VirtualizedContainerService.HintSize="562,1606" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="526,1589" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <Sequence sap:VirtualizedContainerService.HintSize="526,1419" sap2010:WorkflowViewState.IdRef="Sequence_18">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -248,18 +249,7 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,254" sap2010:WorkflowViewState.IdRef="CommentOut_20">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;io_CountryCode: &quot; +io_CountryCode]" />
-                    </Sequence>
-                  </ui:CommentOut.Body>
-                </ui:CommentOut>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="484,84" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;io_CountryCode: &quot; +io_CountryCode]" />
                 <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="484,84" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;榆樹&quot;+string.Join(&quot;___&quot;, io_arr9)]" />
               </Sequence>
             </If.Then>
@@ -296,25 +286,55 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RUNRUNRUN workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="RUNRUNRUN.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">[in_TransactionNumber]</InArgument>
-              <InArgument x:TypeArguments="s:String[]" x:Key="in_arr0">[in_arr0]</InArgument>
-              <InArgument x:TypeArguments="s:String[]" x:Key="in_arr3">[in_arr3]</InArgument>
-              <InOutArgument x:TypeArguments="s:String[]" x:Key="io_arr9">[io_arr9]</InOutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_test">[out_test]</OutArgument>
-              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_Throw">[io_Throw]</InOutArgument>
-              <InOutArgument x:TypeArguments="x:Int32" x:Key="io_equ">[io_equ]</InOutArgument>
-              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_islast">[io_islast]</InOutArgument>
-              <InOutArgument x:TypeArguments="s:Int32[]" x:Key="io_equarr">[io_equarr]</InOutArgument>
-              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_SwitchWTPE">[io_SwitchWTPE]</InOutArgument>
+              <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">
+                <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_TransactionItem" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">
+                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_TransactionNumber" />
+              </InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_arr0">
+                <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="in_arr0" />
+              </InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_arr3">
+                <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="in_arr3" />
+              </InArgument>
+              <InOutArgument x:TypeArguments="s:String[]" x:Key="io_arr9">
+                <mva:VisualBasicReference x:TypeArguments="s:String[]" ExpressionText="io_arr9" />
+              </InOutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_test">
+                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_test" />
+              </OutArgument>
+              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_Throw">
+                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="io_Throw" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="x:Int32" x:Key="io_equ">
+                <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="io_equ" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_islast">
+                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="io_islast" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="s:Int32[]" x:Key="io_equarr">
+                <mva:VisualBasicReference x:TypeArguments="s:Int32[]" ExpressionText="io_equarr" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_SwitchWTPE">
+                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="io_SwitchWTPE" />
+              </InOutArgument>
               <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_overflow" />
               <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_EXDT1" />
               <InOutArgument x:TypeArguments="x:Int32" x:Key="io_AAA" />
               <InArgument x:TypeArguments="sd:DataTable" x:Key="out_EXDT2" />
-              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_runagain">[io_runagain]</InOutArgument>
-              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_NoItem">[io_NoItem]</InOutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_CountryCode">[io_CountryCode]</OutArgument>
-              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_Gettable">[io_Gettable]</InOutArgument>
+              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_runagain">
+                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="io_runagain" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_NoItem">
+                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="io_NoItem" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_Gettable">
+                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="io_Gettable" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="x:String" x:Key="io_CountryCode">
+                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_CountryCode" />
+              </InOutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
